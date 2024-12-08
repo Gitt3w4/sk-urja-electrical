@@ -1,0 +1,134 @@
+
+
+
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>S.K Urja Electrical</title>
+<link rel="stylesheet" href="style.css">
+<link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,600,700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"> 
+</head>
+<body>
+    <section class="sub-header">
+        <nav>
+            <a href="index.html"><img src="imgaes1/logo.png"></a>
+            <div class="nav-links" id="navLinks">  
+                <i class="fa fa-close" onclick="hideMenu()"></i>
+                <ul>
+                    <li><a href="index.html">HOME</a></li>
+                    <li><a href="about.html">ABOUT</a></li>
+                    <li><a href="Service.html">SERVICES</a></li>
+                    <li><a href="Work.html">WORK</a></li>
+                    <li><a href="contact.html">CONTACT</a></li>
+                </ul>
+            </div>
+            <i class="fa fa-bars" onclick="showMenu()"></i>
+        </nav>
+        <h1>Contact Us</h1>
+    </section>
+    
+<!------- Contact Us ------->
+
+<section class="location">
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15084.444875443069!2d74.71221829999999!3d19.058847049999997!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bdcb118cf18a589%3A0xc3a98ac63e23033b!2sShikshak%20Colony%2C%20Kedgaon%2C%20Ahmednagar%2C%20Maharashtra%20414005!5e0!3m2!1sen!2sin!4v1730901802295!5m2!1sen!2sin" width="720" height="445" frameborder="0" style="border:0" allowfullscreen></iframe>
+</section>
+
+<section class="contact-us">
+    <div class="row">
+        <div class="contact-col">
+            <div class="contact-info">
+                <h3>Visit Our Office</h3>
+                <p> No.13 Sindhuratna Bunglow,<br>
+                   Shikshak Colony,<br>
+                   Mohininagar, Kedgaon Ahilyanagar,<br>
+                   414005, Pune, Maharashtra, India</p>
+            </div>
+            <div>
+                <i class="fa fa-phone"></i>
+                <span>
+                    <h5>+91 8087164982</h5>
+                    <p>Monday to Saturday 10 Am to 6 Pm</p>
+                </span>
+            </div>
+            <div>
+                <i class="fa fa-envelope-o"></i>
+                <span>
+                    <h5>skurja23@gmail.com</h5>
+                    <p>Email us your query</p>
+                </span>
+            </div>
+        </div>
+        <div class="contact-col">
+            <form action="https://api.web3forms.com/submit" method="POST">
+
+                <!-- Replace with your Access Key -->
+                <input type="hidden" name="access_key" value="e9467bd1-f762-400c-807d-7f7f745d8594">
+            
+               <input type="text" name="name" placeholder="Enter your name" required>
+                <input type="email" name="email" placeholder="Enter email address" required>
+                <input type="text" name="subject" placeholder="Enter your subject" required>
+                <textarea rows="8" name="message" placeholder="Message" required></textarea>
+                <button type="submit" class="hero-btn red-btn">Submit</button>
+            </form> 
+        </div>
+    </div>
+</section>
+
+<!-------- footer ---------->
+<section class="footer">
+    <h4>About Us</h4>
+    <p>S.K. Urja Electrical, based in Kedgaon at Plot No.13 Sindhuratna Bunglow, Shikshak Colony, Mohininagar, Ahilyanagar, is a leader in innovative electrical solutions. whom are actively engaged in ongoing projects, we are committed to delivering quality and sustainable energy solutions, providing tailored services that meet the unique needs of every project.
+    </p>
+    <div class="icons">
+        <i class="fa fa-facebook"></i>
+        <i class="fa fa-twitter"></i>
+        <i class="fa fa-instagram"></i>
+        <i class="fa fa-linkedin"></i>
+    </div>
+</section>
+
+</body>
+  
+<!-- JavaScript for form submission feedback -->
+<script>
+    const form = document.querySelector("form");
+    form.addEventListener("submit", async (event) => {
+        event.preventDefault(); // Prevent default form submission
+
+        // Create FormData from the form
+        const formData = new FormData(form);
+
+        try {
+            // Send the form data to the Web3Forms API
+            const response = await fetch(form.action, {
+                method: form.method,
+                body: formData,
+            });
+
+            // Check if the request was successful
+            if (response.ok) {
+                alert("Form submitted successfully!");
+                form.reset(); // Optional: Reset the form fields after submission
+            } else {
+                alert("There was an error submitting the form.");
+            }
+        } catch (error) {
+            alert("Error submitting the form: " + error.message);
+        }
+    });
+</script>
+
+<!-- JavaScript for toggle menu -->
+<script>
+    var navLinks = document.getElementById("navLinks");
+
+    function showMenu() {
+        navLinks.style.right = "0";
+    }
+
+    function hideMenu() {
+        navLinks.style.right = "-200px";
+    }
+</script> 
+</html>
